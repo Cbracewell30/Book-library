@@ -32,29 +32,39 @@
         <div class="modal-background has-background-black"></div>
         <div class="modal-content">
             <h2 class=" has-text-white">Welcome to Book Critic, a site in development!</h2>
-            <p class=" has-text-white"> Have you ever heard an established or new author say that their book is a New York Times Best Seller? Have you ever thought, "How do I choose which best seller I want to read this week"?
+            <p class=" has-text-info"> Have you ever heard an established or new author say that their book is a New York Times Best Seller? Have you ever thought, "How do I choose which best seller I want to read this week"?
                  What if there was an application that allowed you to find the current weeks best Fiction and Non-Fictional sellers and allows you to get a review from real people!
                 <p class="has-text-info"> Well, Book Critic makes this possible. Book Critic will give you a list of This weeks Fictional and Non-Fictional best sellers, and connects you to youtube reviews.
             </p>
             <br>
+            <p class="has-text-white"> The search requires you to type in a number.Please see the search key below:</p>
+            <p class="has-text-info" >
+                4: Fiction
+                5: Non-fiction
+                6: Advice and How-To's
+                7: Childern & Middle age
             </p>
+            <br>
+            </p>
+            <ul class="p-2" id="previous-search"></ul>
+            <label> Search for Genre</label>
+              <input id="genreSearch">
+
             <section class="section is-fullhd">
-                <button id="nysearch">
-                    Fiction 
-                  </button>
+                <button id="nysearch">Search</button>
         
-                  <button id="nySearchNfictional">
-                  Non-Fiction
-                  </button>
+                  <!-- <button id="nySearchNfictional">Non-Fiction</button> -->
            </section>
         </div>
  
     </div>
 </section>
 
-<div>
+<div class="p-2">
     <button class="button" id="genre-trigger"> Change Genre</button>
 </div>
+<br>
+<h1 id="genreTitle"></h1>
 
 <!-- display search results -->
 <section class="section">
