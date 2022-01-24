@@ -74,7 +74,7 @@ function getApi(searchtxt) {
       var getStorage = localStorage.getItem("Genre")
       var getGenre = JSON.parse(getStorage) || []
       console.log(getGenre);
-    //   checks to see if local storage has any search items
+      //   checks to see if local storage has any search items
       if (getGenre.indexOf(searchtxt) === -1) {
         //if no search terms, add the newly searched item to the aray
         getGenre.push(searchtxt)
@@ -86,33 +86,6 @@ function getApi(searchtxt) {
     })
 };
 
-
-// function getApi2() {
-//   modal.style.display = "none"
-//   var requestUrl = "https://api.nytimes.com/svc/books/v3/lists/overview.json?api-key=" + bookAPI;
-//   fetch(requestUrl)
-//   .then(function(response) {
-//     console.log (response)
-//     return response.json();
-//   })
-//   .then(function(data) {
-//     console.log (data)
-//     for (var i = 0; i < 5; i++) {
-//      var nauthor = document.createElement('a');
-//       nauthor.textContent = data.results.lists[1].books[i].author + ": " + data.results.lists[1].books[i].title;
-//       nauthor.setAttribute("position", i.toString());
-//       nauthor.setAttribute("id", "book-Element_" + i);
-//       nauthor.classList.add("p-2");
-//       nFictionalList.appendChild(nauthor); 
-
-
-//     }
-//     var booklist = document.querySelectorAll(".booklist > a");
-//     getResult(booklist);
-//   });
-
-
-// };
 
 
 // On click event that send the response to the youtube video to get video review
@@ -197,11 +170,3 @@ function saveClick() {
 
 // runs the save click function on page load.
 saveClick();
-
-// 
-// nonFictinoalBtn.addEventListener('click', getApi2);
-// nonFictinoalBtn.addEventListener('click', function() {
-//   var btnTxT = nonFictinoalBtn.textContent; 
-//   console.log(btnTxT)
-//   saveClick(btnTxT)
-//   });
